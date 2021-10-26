@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Assignment2_ScientificCalculator/1.0.0": {
+        "runtime": {
+          "Assignment2_ScientificCalculator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assignment2_ScientificCalculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
