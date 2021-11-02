@@ -30,7 +30,7 @@ namespace Assignment2_ScientificCalculator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textboxdisplay = new System.Windows.Forms.TextBox();
+            this.Display = new System.Windows.Forms.TextBox();
             this.CloseParenthesis = new System.Windows.Forms.Button();
             this.OpenParenthesis = new System.Windows.Forms.Button();
             this.LnBtn = new System.Windows.Forms.Button();
@@ -89,18 +89,18 @@ namespace Assignment2_ScientificCalculator
             this.Gradians = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // textboxdisplay
+            // Display
             // 
-            this.textboxdisplay.BackColor = System.Drawing.Color.LightSalmon;
-            this.textboxdisplay.Enabled = false;
-            this.textboxdisplay.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textboxdisplay.Location = new System.Drawing.Point(10, 39);
-            this.textboxdisplay.Name = "textboxdisplay";
-            this.textboxdisplay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textboxdisplay.Size = new System.Drawing.Size(515, 57);
-            this.textboxdisplay.TabIndex = 0;
-            this.textboxdisplay.Text = "0";
-            this.textboxdisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Display.BackColor = System.Drawing.Color.LightSalmon;
+            this.Display.Enabled = false;
+            this.Display.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Display.Location = new System.Drawing.Point(10, 39);
+            this.Display.Name = "Display";
+            this.Display.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Display.Size = new System.Drawing.Size(515, 57);
+            this.Display.TabIndex = 0;
+            this.Display.Text = "0";
+            this.Display.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CloseParenthesis
             // 
@@ -482,6 +482,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonZero.TabIndex = 95;
             this.ButtonZero.Text = "0";
             this.ButtonZero.UseVisualStyleBackColor = false;
+            this.ButtonZero.Click += new System.EventHandler(this.ButtonZero_Click);
             // 
             // Divide
             // 
@@ -522,6 +523,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonThree.TabIndex = 91;
             this.ButtonThree.Text = "3";
             this.ButtonThree.UseVisualStyleBackColor = false;
+            this.ButtonThree.Click += new System.EventHandler(this.ButtonThree_Click);
             // 
             // ButtonOne
             // 
@@ -535,7 +537,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonOne.TabIndex = 90;
             this.ButtonOne.Text = "1";
             this.ButtonOne.UseVisualStyleBackColor = false;
-            this.ButtonOne.Click += new System.EventHandler(this.btn1_Click);
+            this.ButtonOne.Click += new System.EventHandler(this.ButtonOne_Click);
             // 
             // ButtonTwo
             // 
@@ -549,6 +551,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonTwo.TabIndex = 89;
             this.ButtonTwo.Text = "2";
             this.ButtonTwo.UseVisualStyleBackColor = false;
+            this.ButtonTwo.Click += new System.EventHandler(this.ButtonTwo_Click);
             // 
             // OneOverX
             // 
@@ -588,6 +591,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonSix.TabIndex = 86;
             this.ButtonSix.Text = "6";
             this.ButtonSix.UseVisualStyleBackColor = false;
+            this.ButtonSix.Click += new System.EventHandler(this.ButtonSix_Click);
             // 
             // ButtonFour
             // 
@@ -601,6 +605,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonFour.TabIndex = 85;
             this.ButtonFour.Text = "4";
             this.ButtonFour.UseVisualStyleBackColor = false;
+            this.ButtonFour.Click += new System.EventHandler(this.ButtonFour_Click);
             // 
             // ButtonFive
             // 
@@ -614,6 +619,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonFive.TabIndex = 84;
             this.ButtonFive.Text = "5";
             this.ButtonFive.UseVisualStyleBackColor = false;
+            this.ButtonFive.Click += new System.EventHandler(this.ButtonFive_Click);
             // 
             // Percentage
             // 
@@ -640,6 +646,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonNine.TabIndex = 81;
             this.ButtonNine.Text = "9";
             this.ButtonNine.UseVisualStyleBackColor = false;
+            this.ButtonNine.Click += new System.EventHandler(this.ButtonNine_Click);
             // 
             // ButtonSeven
             // 
@@ -653,6 +660,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonSeven.TabIndex = 80;
             this.ButtonSeven.Text = "7";
             this.ButtonSeven.UseVisualStyleBackColor = false;
+            this.ButtonSeven.Click += new System.EventHandler(this.ButtonSeven_Click);
             // 
             // ButtonEight
             // 
@@ -666,6 +674,7 @@ namespace Assignment2_ScientificCalculator
             this.ButtonEight.TabIndex = 79;
             this.ButtonEight.Text = "8";
             this.ButtonEight.UseVisualStyleBackColor = false;
+            this.ButtonEight.Click += new System.EventHandler(this.ButtonEight_Click);
             // 
             // Radical
             // 
@@ -902,7 +911,7 @@ namespace Assignment2_ScientificCalculator
             this.Controls.Add(this.LnBtn);
             this.Controls.Add(this.button48);
             this.Controls.Add(this.LnvBtn);
-            this.Controls.Add(this.textboxdisplay);
+            this.Controls.Add(this.Display);
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -918,7 +927,7 @@ namespace Assignment2_ScientificCalculator
 
         #endregion
 
-        private System.Windows.Forms.TextBox textboxdisplay;
+        private System.Windows.Forms.TextBox Display;
         private System.Windows.Forms.Button CloseParenthesis;
         private System.Windows.Forms.Button OpenParenthesis;
         private System.Windows.Forms.Button LnBtn;
