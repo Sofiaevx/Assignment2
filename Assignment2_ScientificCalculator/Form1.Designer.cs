@@ -714,6 +714,7 @@ namespace Assignment2_ScientificCalculator
             this.C.TabIndex = 76;
             this.C.Text = "C";
             this.C.UseVisualStyleBackColor = false;
+            this.C.Click += new System.EventHandler(this.C_Click);
             // 
             // LeftArrow
             // 
@@ -741,6 +742,7 @@ namespace Assignment2_ScientificCalculator
             this.CE.TabIndex = 74;
             this.CE.Text = "CE";
             this.CE.UseVisualStyleBackColor = false;
+            this.CE.Click += new System.EventHandler(this.CE_Click);
             // 
             // BtnMminus
             // 

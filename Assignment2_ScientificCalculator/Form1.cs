@@ -172,5 +172,19 @@ namespace Assignment2_ScientificCalculator
             clearzero();
             Display.Text = Display.Text + "9";
         }
+
+        private void CE_Click(object sender, EventArgs e)
+        {
+            Display.Text = Display.Text.Substring(0, Display.Text.Length - 1);
+            if (Display.Text.Length == 0)
+            {
+                Display.Text = "0";
+            }
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            Display.Text = "0";
+        }
     }
 }
