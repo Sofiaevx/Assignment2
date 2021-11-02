@@ -105,55 +105,71 @@ namespace Assignment2_ScientificCalculator
         {
 
         }
-
+        private void clearzero()
+        {
+            if (Display.Text == "0")
+            {
+                Display.Text = "";
+            }
+        }
       
         private void ButtonZero_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "0";
         }
 
         private void ButtonOne_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "1";
         }
 
         private void ButtonTwo_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "2";
         }
 
         private void ButtonThree_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "3";
         }
 
         private void ButtonFour_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "4";
         }
 
         private void ButtonFive_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "5";
         }
 
         private void ButtonSix_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "6";
         }
 
         private void ButtonSeven_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "7";
         }
 
         private void ButtonEight_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "8";
         }
 
         private void ButtonNine_Click(object sender, EventArgs e)
         {
+            clearzero();
             Display.Text = Display.Text + "9";
         }
     }
