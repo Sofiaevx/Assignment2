@@ -105,5 +105,10 @@ namespace Assignment2_ScientificCalculator
         {
 
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            textboxdisplay.Text = textboxdisplay.Text + "1";
+        }
     }
 }

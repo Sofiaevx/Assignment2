@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj": {}
+    "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj": {
+    "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj",
         "projectName": "Assignment2_ScientificCalculator",
-        "projectPath": "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj",
+        "projectPath": "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2\\Assignment2_ScientificCalculator\\Assignment2_ScientificCalculator.csproj",
         "packagesPath": "C:\\Users\\Jv Cataquiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2_ScientificCalculator\\obj\\",
+        "outputPath": "C:\\Users\\Jv Cataquiz\\OOP\\Assignment2\\Assignment2_ScientificCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
