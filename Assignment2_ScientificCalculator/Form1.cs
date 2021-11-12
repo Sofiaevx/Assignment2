@@ -12,6 +12,11 @@ namespace Assignment2_ScientificCalculator
 {
     public partial class Form1 : Form
     {
+        string operation;
+        double firstvalue;
+        double secondvalue;
+        string[] parts = null;
+        double answer;
         public Form1()
         {
             InitializeComponent();
@@ -81,15 +86,9 @@ namespace Assignment2_ScientificCalculator
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void button24_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button67_Click(object sender, EventArgs e)
         {
@@ -185,6 +184,165 @@ namespace Assignment2_ScientificCalculator
         private void C_Click(object sender, EventArgs e)
         {
             Display.Text = "0";
+        }
+
+        private void Decimal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Plus_Click(object sender, EventArgs e)
+        {
+            operation = "+";
+            if (!Display.Text.Contains("+"))
+            {
+                Display.Text = Display.Text + "+";             
+            }
+        }   
+
+        private void Minus_Click(object sender, EventArgs e)
+        {
+            operation = "-";
+            if (!Display.Text.Contains("-"))
+            {
+                Display.Text = Display.Text + "-";
+            }
+        }
+        private void Multiplication_Click(object sender, EventArgs e)
+        {
+            operation = "*";
+            if (!Display.Text.Contains("*"))
+            {
+                Display.Text = Display.Text + "*";
+            }
+        }
+        private void Divide_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            if (!Display.Text.Contains("/"))
+            {
+                Display.Text = Display.Text + "/";
+            }
+        }
+        private void BtnEquals_Click(object sender, EventArgs e)
+        {
+            switch (operation)
+            {
+                case "+":
+                    parts = Display.Text.Split("+");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = firstvalue + secondvalue;
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "-":
+                    parts = Display.Text.Split("-");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = firstvalue - secondvalue;
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "*":
+                    parts = Display.Text.Split("*");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = firstvalue * secondvalue;
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "/":
+                    parts = Display.Text.Split("/");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = firstvalue / secondvalue;
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "1/":
+                    parts = Display.Text.Split("1/");
+                    
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = 1 / secondvalue;
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "%":
+                    parts = Display.Text.Split("%");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    
+                    answer = firstvalue / 100;
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "±":
+                    parts = Display.Text.Split("±");
+
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = secondvalue * (-1);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "x√y":
+                    parts = Display.Text.Split("√");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Pow(secondvalue, 1 / firstvalue);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+            }
+        } 
+
+        private void LeftArrow_Click(object sender, EventArgs e)
+        {
+            Display.Text = Display.Text.Substring(0, Display.Text.Length - 1);
+            if (Display.Text.Length == 0)
+            {
+                Display.Text = "0";
+            }
+        }
+
+        private void OneOverX_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "1/";
+            if (!Display.Text.Contains("1/"))
+            {
+                Display.Text = "1/" + Display.Text;
+               
+            }
+        }
+
+        private void Percentage_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "%";
+            if (!Display.Text.Contains("%"))
+            {
+                Display.Text = Display.Text + "%";
+
+            }
+        }
+
+        private void PlusMinus_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "±";
+            if (!Display.Text.Contains("±"))
+            {
+                Display.Text = "±" + Display.Text;
+
+            }
+        }
+
+        private void Radical_Click(object sender, EventArgs e)
+        {
+            operation = "x√y";
+            if (!Display.Text.Contains("√"))
+            {
+                Display.Text = Display.Text + "√";
+            }
         }
     }
 }

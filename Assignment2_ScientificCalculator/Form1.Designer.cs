@@ -96,10 +96,11 @@ namespace Assignment2_ScientificCalculator
             this.Display.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Display.Location = new System.Drawing.Point(10, 39);
             this.Display.Name = "Display";
-            this.Display.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Display.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Display.Size = new System.Drawing.Size(515, 57);
             this.Display.TabIndex = 0;
             this.Display.Text = "0";
+            this.Display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Display.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CloseParenthesis
@@ -443,6 +444,7 @@ namespace Assignment2_ScientificCalculator
             this.BtnEquals.TabIndex = 98;
             this.BtnEquals.Text = "=";
             this.BtnEquals.UseVisualStyleBackColor = false;
+            this.BtnEquals.Click += new System.EventHandler(this.BtnEquals_Click);
             // 
             // Plus
             // 
@@ -456,6 +458,7 @@ namespace Assignment2_ScientificCalculator
             this.Plus.TabIndex = 97;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = false;
+            this.Plus.Click += new System.EventHandler(this.Plus_Click);
             // 
             // Decimal
             // 
@@ -469,6 +472,7 @@ namespace Assignment2_ScientificCalculator
             this.Decimal.TabIndex = 96;
             this.Decimal.Text = ".";
             this.Decimal.UseVisualStyleBackColor = false;
+            this.Decimal.Click += new System.EventHandler(this.Decimal_Click);
             // 
             // ButtonZero
             // 
@@ -496,7 +500,7 @@ namespace Assignment2_ScientificCalculator
             this.Divide.TabIndex = 93;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = false;
-            this.Divide.Click += new System.EventHandler(this.button6_Click);
+            this.Divide.Click += new System.EventHandler(this.Divide_Click);
             // 
             // Minus
             // 
@@ -510,6 +514,7 @@ namespace Assignment2_ScientificCalculator
             this.Minus.TabIndex = 92;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = false;
+            this.Minus.Click += new System.EventHandler(this.Minus_Click);
             // 
             // ButtonThree
             // 
@@ -565,6 +570,7 @@ namespace Assignment2_ScientificCalculator
             this.OneOverX.TabIndex = 88;
             this.OneOverX.Text = "1/x";
             this.OneOverX.UseVisualStyleBackColor = false;
+            this.OneOverX.Click += new System.EventHandler(this.OneOverX_Click);
             // 
             // Multiplication
             // 
@@ -578,6 +584,7 @@ namespace Assignment2_ScientificCalculator
             this.Multiplication.TabIndex = 87;
             this.Multiplication.Text = "*";
             this.Multiplication.UseVisualStyleBackColor = false;
+            this.Multiplication.Click += new System.EventHandler(this.Multiplication_Click);
             // 
             // ButtonSix
             // 
@@ -633,6 +640,7 @@ namespace Assignment2_ScientificCalculator
             this.Percentage.TabIndex = 83;
             this.Percentage.Text = "%";
             this.Percentage.UseVisualStyleBackColor = false;
+            this.Percentage.Click += new System.EventHandler(this.Percentage_Click);
             // 
             // ButtonNine
             // 
@@ -688,6 +696,7 @@ namespace Assignment2_ScientificCalculator
             this.Radical.TabIndex = 78;
             this.Radical.Text = "√";
             this.Radical.UseVisualStyleBackColor = false;
+            this.Radical.Click += new System.EventHandler(this.Radical_Click);
             // 
             // PlusMinus
             // 
@@ -701,6 +710,7 @@ namespace Assignment2_ScientificCalculator
             this.PlusMinus.TabIndex = 77;
             this.PlusMinus.Text = "±";
             this.PlusMinus.UseVisualStyleBackColor = false;
+            this.PlusMinus.Click += new System.EventHandler(this.PlusMinus_Click);
             // 
             // C
             // 
@@ -728,7 +738,7 @@ namespace Assignment2_ScientificCalculator
             this.LeftArrow.TabIndex = 75;
             this.LeftArrow.Text = "←";
             this.LeftArrow.UseVisualStyleBackColor = false;
-            this.LeftArrow.Click += new System.EventHandler(this.button24_Click_1);
+            this.LeftArrow.Click += new System.EventHandler(this.LeftArrow_Click);
             // 
             // CE
             // 
