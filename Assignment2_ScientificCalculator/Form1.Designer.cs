@@ -376,7 +376,7 @@ namespace Assignment2_ScientificCalculator
             this.TenraisedtoX.Text = "10^x";
             this.TenraisedtoX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TenraisedtoX.UseVisualStyleBackColor = false;
-            this.TenraisedtoX.Click += new System.EventHandler(this.button65_Click);
+            this.TenraisedtoX.Click += new System.EventHandler(this.TenraisedtoX_Click);
             // 
             // LogBtn
             // 

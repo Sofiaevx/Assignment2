@@ -95,10 +95,7 @@ namespace Assignment2_ScientificCalculator
 
         }
 
-        private void button65_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void button66_Click(object sender, EventArgs e)
         {
@@ -291,6 +288,14 @@ namespace Assignment2_ScientificCalculator
                     answer = Math.Pow(secondvalue, 1 / firstvalue);
                     Display.Text = Convert.ToString(answer);
                     break;
+
+                case "10":
+                    parts = Display.Text.Split("10^");
+                   
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Pow(10, secondvalue);
+                    Display.Text = Convert.ToString(answer);
+                    break;
             }
         } 
 
@@ -338,10 +343,22 @@ namespace Assignment2_ScientificCalculator
 
         private void Radical_Click(object sender, EventArgs e)
         {
+            clearzero();
             operation = "x√y";
             if (!Display.Text.Contains("√"))
             {
                 Display.Text = Display.Text + "√";
+            }
+        }
+
+        private void TenraisedtoX_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "10";
+            if (!Display.Text.Contains("10^"))
+            {
+                Display.Text = "10^" + Display.Text;
+
             }
         }
     }
