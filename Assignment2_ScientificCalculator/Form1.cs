@@ -296,6 +296,14 @@ namespace Assignment2_ScientificCalculator
                     answer = Math.Pow(10, secondvalue);
                     Display.Text = Convert.ToString(answer);
                     break;
+
+                case "xsqrty":
+                    parts = Display.Text.Split("√");
+
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Sqrt(secondvalue);
+                    Display.Text = Convert.ToString(answer);
+                    break;
             }
         } 
 
@@ -358,6 +366,17 @@ namespace Assignment2_ScientificCalculator
             if (!Display.Text.Contains("10^"))
             {
                 Display.Text = "10^" + Display.Text;
+
+            }
+        }
+
+        private void Squareroot_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "xsqrty";
+            if (!Display.Text.Contains("√"))
+            {
+                Display.Text = "√" + Display.Text;
 
             }
         }

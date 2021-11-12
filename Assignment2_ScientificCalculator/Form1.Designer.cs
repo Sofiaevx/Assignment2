@@ -310,6 +310,7 @@ namespace Assignment2_ScientificCalculator
             this.Squareroot.TabIndex = 68;
             this.Squareroot.Text = "2√x";
             this.Squareroot.UseVisualStyleBackColor = false;
+            this.Squareroot.Click += new System.EventHandler(this.Squareroot_Click);
             // 
             // Cube
             // 
