@@ -245,6 +245,7 @@ namespace Assignment2_ScientificCalculator
             this.Cuberoot.TabIndex = 63;
             this.Cuberoot.Text = "3√x";
             this.Cuberoot.UseVisualStyleBackColor = false;
+            this.Cuberoot.Click += new System.EventHandler(this.Cuberoot_Click);
             // 
             // XraisedtoY
             // 

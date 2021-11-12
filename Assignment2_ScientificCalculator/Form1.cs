@@ -290,8 +290,7 @@ namespace Assignment2_ScientificCalculator
                     break;
 
                 case "10":
-                    parts = Display.Text.Split("10^");
-                   
+                    parts = Display.Text.Split("10^");                  
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Pow(10, secondvalue);
                     Display.Text = Convert.ToString(answer);
@@ -299,9 +298,15 @@ namespace Assignment2_ScientificCalculator
 
                 case "xsqrty":
                     parts = Display.Text.Split("√");
-
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Sqrt(secondvalue);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+
+                case "Croot":
+                    parts = Display.Text.Split("3√");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Cbrt(secondvalue);
                     Display.Text = Convert.ToString(answer);
                     break;
             }
@@ -377,7 +382,16 @@ namespace Assignment2_ScientificCalculator
             if (!Display.Text.Contains("√"))
             {
                 Display.Text = "√" + Display.Text;
+            }
+        }
 
+        private void Cuberoot_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "Croot";
+            if (!Display.Text.Contains("3√"))
+            {
+                Display.Text = "3√" + Display.Text;
             }
         }
     }
