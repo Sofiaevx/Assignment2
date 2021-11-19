@@ -13,9 +13,9 @@ namespace Assignment2_ScientificCalculator
     public partial class Form1 : Form
     {
         string operation;
-        double firstvalue;
-        double secondvalue;
-        string[] parts = null;
+        double firstnum;
+        double secondnum;
+        string[] value = null;
         double answer;
         public Form1()
         {
@@ -24,7 +24,7 @@ namespace Assignment2_ScientificCalculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-                    }
+         }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -97,10 +97,7 @@ namespace Assignment2_ScientificCalculator
 
 
 
-        private void button66_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private void clearzero()
         {
             if (Display.Text == "0")
@@ -185,7 +182,10 @@ namespace Assignment2_ScientificCalculator
 
         private void Decimal_Click(object sender, EventArgs e)
         {
-
+            if (!Display.Text.Contains("."))
+            {
+                Display.Text = Display.Text + ".";
+            }
         }
 
         private void Plus_Click(object sender, EventArgs e)
@@ -226,89 +226,160 @@ namespace Assignment2_ScientificCalculator
             switch (operation)
             {
                 case "+":
-                    parts = Display.Text.Split("+");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue + secondvalue;
+                    value = Display.Text.Split("+");
+                    firstnum = Convert.ToDouble(value[0]);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = firstnum + secondnum;
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "-":
-                    parts = Display.Text.Split("-");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue - secondvalue;
+                    value = Display.Text.Split("-");
+                    firstnum = Convert.ToDouble(value[0]);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = firstnum - secondnum;
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "*":
-                    parts = Display.Text.Split("*");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue * secondvalue;
+                    value = Display.Text.Split("*");
+                    firstnum = Convert.ToDouble(value[0]);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = firstnum * secondnum;
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "/":
-                    parts = Display.Text.Split("/");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue / secondvalue;
+                    value = Display.Text.Split("/");
+                    firstnum = Convert.ToDouble(value[0]);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = firstnum / secondnum;
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "1/":
-                    parts = Display.Text.Split("1/");
+                    value = Display.Text.Split("1/");
                     
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = 1 / secondvalue;
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = 1 / secondnum;
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "%":
-                    parts = Display.Text.Split("%");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    
-                    answer = firstvalue / 100;
+                    value = Display.Text.Split("%");
+                    firstnum = Convert.ToDouble(value[0]);
+                    answer = firstnum / 100;
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "±":
-                    parts = Display.Text.Split("±");
+                    value = Display.Text.Split("±");
 
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = secondvalue * (-1);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = secondnum * (-1);
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "x√y":
-                    parts = Display.Text.Split("√");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = Math.Pow(secondvalue, 1 / firstvalue);
+                    value = Display.Text.Split("√");
+                    firstnum = Convert.ToDouble(value[0]);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Pow(secondnum, 1 / firstnum);
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "10":
-                    parts = Display.Text.Split("10^");                  
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = Math.Pow(10, secondvalue);
+                    value = Display.Text.Split("10^");                  
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Pow(10, secondnum);
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "xsqrty":
-                    parts = Display.Text.Split("√");
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = Math.Sqrt(secondvalue);
+                    value = Display.Text.Split("√");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Sqrt(secondnum);
                     Display.Text = Convert.ToString(answer);
                     break;
 
                 case "Croot":
-                    parts = Display.Text.Split("3√");
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = Math.Cbrt(secondvalue);
+                    value = Display.Text.Split("3√");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Cbrt(secondnum);
                     Display.Text = Convert.ToString(answer);
                     break;
+                case "Cube":
+                    value = Display.Text.Split("^");
+                    firstnum = Convert.ToDouble(value[0]);
+                    answer = Math.Pow(firstnum,3);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "square":
+                    value = Display.Text.Split("^");
+                    firstnum = Convert.ToDouble(value[0]);
+                    answer = Math.Pow(firstnum, 2);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "xy":
+                    value = Display.Text.Split("^");
+                    firstnum = Convert.ToDouble(value[0]);
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Pow(firstnum, secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "log":
+                    value = Display.Text.Split("log");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Log10(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "ln":
+                    value = Display.Text.Split("ln");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Log(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "sin":
+                    value = Display.Text.Split("sin");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Sin(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "cos":
+                    value = Display.Text.Split("cos");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Cos(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "tan":
+                    value = Display.Text.Split("tan");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Tan(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "sinh":
+                    value = Display.Text.Split("sinh");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Sinh(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "cosh":
+                    value = Display.Text.Split("cosh");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Cosh(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "tanh":
+                    value = Display.Text.Split("tanh");
+                    secondnum = Convert.ToDouble(value[1]);
+                    answer = Math.Tanh(secondnum);
+                    Display.Text = Convert.ToString(answer);
+                    break;
+                case "pi":
+                    
+                    Display.Text = Convert.ToString(Math.PI);
+                    break;
+
             }
         } 
 
@@ -393,6 +464,123 @@ namespace Assignment2_ScientificCalculator
             {
                 Display.Text = "3√" + Display.Text;
             }
+        }
+
+        private void Cube_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "Cube";
+            if (!Display.Text.Contains("^3"))
+            {
+                Display.Text = Display.Text + "^3";
+            }
+        }
+
+        private void Squared_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "square";
+            if (!Display.Text.Contains("^2"))
+            {
+                Display.Text = Display.Text + "^2";
+            }
+        }
+
+        private void XraisedtoY_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "xy";
+            if (!Display.Text.Contains("^"))
+            {
+                Display.Text = Display.Text + "^";
+            }
+        }
+
+        private void LogBtn_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "log";
+            if (!Display.Text.Contains("log10"))
+            {
+                Display.Text = "log10" + Display.Text;
+            }
+        }
+        private void LnBtn_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "ln";
+            if (!Display.Text.Contains("ln"))
+            {
+                Display.Text = "ln" + Display.Text;
+            }
+        }
+        private void Sine_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "sin";
+            if (!Display.Text.Contains("sin"))
+            {
+                Display.Text = "sin" + Display.Text;
+            }
+        }
+
+        private void Cosine_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "cos";
+            if (!Display.Text.Contains("cos"))
+            {
+                Display.Text = "cos" + Display.Text;
+            }
+        }
+
+        private void Tangent_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "tan";
+            if (!Display.Text.Contains("tan"))
+            {
+                Display.Text = "tan" + Display.Text;
+            }
+        }
+
+        private void Sinh_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "sinh";
+            if (!Display.Text.Contains("sinh"))
+            {
+                Display.Text = "sinh" + Display.Text;
+            }
+        }
+
+        private void Cosh_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "cosh";
+            if (!Display.Text.Contains("cosh"))
+            {
+                Display.Text = "cosh" + Display.Text;
+            }
+        }
+
+        private void Tanh_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "tanh";
+            if (!Display.Text.Contains("tanh"))
+            {
+                Display.Text = "tanh" + Display.Text;
+            }
+        }
+
+        private void PiBtn_Click(object sender, EventArgs e)
+        {
+            clearzero();
+            operation = "pi";
+           
+                Display.Text = Convert.ToString(Math.PI);
+          
         }
     }
 }

@@ -141,6 +141,7 @@ namespace Assignment2_ScientificCalculator
             this.LnBtn.TabIndex = 51;
             this.LnBtn.Text = "ln";
             this.LnBtn.UseVisualStyleBackColor = false;
+            this.LnBtn.Click += new System.EventHandler(this.LnBtn_Click);
             // 
             // button48
             // 
@@ -193,6 +194,7 @@ namespace Assignment2_ScientificCalculator
             this.Squared.TabIndex = 57;
             this.Squared.Text = "x^2";
             this.Squared.UseVisualStyleBackColor = false;
+            this.Squared.Click += new System.EventHandler(this.Squared_Click);
             // 
             // Sine
             // 
@@ -206,6 +208,7 @@ namespace Assignment2_ScientificCalculator
             this.Sine.TabIndex = 56;
             this.Sine.Text = "sin";
             this.Sine.UseVisualStyleBackColor = false;
+            this.Sine.Click += new System.EventHandler(this.Sine_Click);
             // 
             // LntBtn
             // 
@@ -232,6 +235,7 @@ namespace Assignment2_ScientificCalculator
             this.Sinh.TabIndex = 54;
             this.Sinh.Text = "sinh";
             this.Sinh.UseVisualStyleBackColor = false;
+            this.Sinh.Click += new System.EventHandler(this.Sinh_Click);
             // 
             // Cuberoot
             // 
@@ -259,6 +263,7 @@ namespace Assignment2_ScientificCalculator
             this.XraisedtoY.TabIndex = 62;
             this.XraisedtoY.Text = "x^y";
             this.XraisedtoY.UseVisualStyleBackColor = false;
+            this.XraisedtoY.Click += new System.EventHandler(this.XraisedtoY_Click);
             // 
             // Cosine
             // 
@@ -272,6 +277,7 @@ namespace Assignment2_ScientificCalculator
             this.Cosine.TabIndex = 61;
             this.Cosine.Text = "cos";
             this.Cosine.UseVisualStyleBackColor = false;
+            this.Cosine.Click += new System.EventHandler(this.Cosine_Click);
             // 
             // DmsBtn
             // 
@@ -298,6 +304,7 @@ namespace Assignment2_ScientificCalculator
             this.Cosh.TabIndex = 59;
             this.Cosh.Text = "cosh";
             this.Cosh.UseVisualStyleBackColor = false;
+            this.Cosh.Click += new System.EventHandler(this.Cosh_Click);
             // 
             // Squareroot
             // 
@@ -325,6 +332,7 @@ namespace Assignment2_ScientificCalculator
             this.Cube.TabIndex = 67;
             this.Cube.Text = "x^3";
             this.Cube.UseVisualStyleBackColor = false;
+            this.Cube.Click += new System.EventHandler(this.Cube_Click);
             // 
             // Tangent
             // 
@@ -338,6 +346,7 @@ namespace Assignment2_ScientificCalculator
             this.Tangent.TabIndex = 66;
             this.Tangent.Text = "tan";
             this.Tangent.UseVisualStyleBackColor = false;
+            this.Tangent.Click += new System.EventHandler(this.Tangent_Click);
             // 
             // PiBtn
             // 
@@ -351,6 +360,7 @@ namespace Assignment2_ScientificCalculator
             this.PiBtn.TabIndex = 65;
             this.PiBtn.Text = "π";
             this.PiBtn.UseVisualStyleBackColor = false;
+            this.PiBtn.Click += new System.EventHandler(this.PiBtn_Click);
             // 
             // Tanh
             // 
@@ -364,6 +374,7 @@ namespace Assignment2_ScientificCalculator
             this.Tanh.TabIndex = 64;
             this.Tanh.Text = "tanh";
             this.Tanh.UseVisualStyleBackColor = false;
+            this.Tanh.Click += new System.EventHandler(this.Tanh_Click);
             // 
             // TenraisedtoX
             // 
@@ -390,9 +401,9 @@ namespace Assignment2_ScientificCalculator
             this.LogBtn.Name = "LogBtn";
             this.LogBtn.Size = new System.Drawing.Size(46, 31);
             this.LogBtn.TabIndex = 72;
-            this.LogBtn.Text = "Log";
+            this.LogBtn.Text = "Log10";
             this.LogBtn.UseVisualStyleBackColor = false;
-            this.LogBtn.Click += new System.EventHandler(this.button66_Click);
+            this.LogBtn.Click += new System.EventHandler(this.LogBtn_Click);
             // 
             // ModBtn
             // 
